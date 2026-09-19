@@ -1,0 +1,27 @@
+product_id,product_name,category,price,rating
+1,Running Shoes,Footwear,3000,4.3
+2,Sports Shoes,Footwear,3500,4.4
+3,Walking Shoes,Footwear,2500,4.1
+4,Training Shoes,Footwear,4000,4.5
+5,Formal Shoes,Footwear,4500,4.0
+6,Wireless Mouse,Electronics,800,4.2
+7,Bluetooth Keyboard,Electronics,1500,4.3
+8,Gaming Mouse,Electronics,2500,4.6
+9,USB Keyboard,Electronics,700,4.0
+10,Laptop Stand,Electronics,1200,4.1
+11,Cotton T-Shirt,Fashion,600,4.2
+12,Polo T-Shirt,Fashion,900,4.3
+13,Denim Jeans,Fashion,1800,4.4
+14,Casual Shirt,Fashion,1200,4.1
+15,Hoodie,Fashion,2200,4.5
+16,Water Bottle,Home,500,4.0
+17,Coffee Mug,Home,300,4.2
+18,Lunch Box,Home,700,4.1
+19,Backpack,Accessories,2000,4.5
+20,Laptop Bag,Accessories,2500,4.4
+21,Mechanical Keyboard,Electronics,4200,4.7
+22,Noise Cancelling Headphones,Electronics,6500,4.6
+23,Trail Running Shoes,Footwear,5200,4.7
+24,Travel Backpack,Accessories,3200,4.6
+25,Insulated Water Bottle,Home,950,4.5
+26,Smart Watch,Electronics,5500,4.4

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation-ui
+  namespace: mlops-workshop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recommendation-ui
+  template:
+    metadata:
+      labels:
+        app: recommendation-ui
+    spec:
+      containers:
+        - name: ui
+          image: recommendation-ui:local
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8501
+          env:
+            - name: API_BASE_URL
+              value: http://recommendation-api:8000
+          readinessProbe:
+            httpGet:
+              path: /_stcore/health
+              port: 8501
+            initialDelaySeconds: 8
+            periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommendation-ui
+  namespace: mlops-workshop
+spec:
+  type: NodePort
+  selector:
+    app: recommendation-ui
+  ports:
+    - port: 8501
+      targetPort: 8501

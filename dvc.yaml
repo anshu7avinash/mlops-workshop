@@ -1,0 +1,15 @@
+stages:
+  train:
+    cmd: python model/train_model.py
+    deps:
+      - model/train_model.py
+      - model/products.csv
+    params:
+      - model.n_neighbors
+      - model.metric
+      - model.top_k
+    outs:
+      - model/recommendation_model.pkl
+      - model/model_metadata.json
+    metrics:
+      - model/metrics.json

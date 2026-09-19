@@ -1,0 +1,32 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    container_name: ecommerce-fastapi-container
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_ENV=local
+
+  ui:
+    build:
+      context: .
+      dockerfile: ui/Dockerfile
+    container_name: ecommerce-streamlit-container
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    environment:
+      - API_BASE_URL=http://api:8000
+
+  mlflow:
+    profiles: ["tools"]
+    build:
+      context: .
+      dockerfile: tracking-server/Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlflow-data:/mlflow

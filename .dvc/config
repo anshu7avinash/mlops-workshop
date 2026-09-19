@@ -1,0 +1,4 @@
+[core]
+    remote = workshop-storage
+['remote "workshop-storage"']
+    url = ../.dvc-storage

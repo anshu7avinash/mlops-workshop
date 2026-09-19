@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local services and data caches
+mlflow-data/
+mlruns/
+.dvc/cache/
+.dvc/tmp/
+.dvc-storage/
+
+# Generated model outputs. DVC tracks these, not Git.
+model/recommendation_model.pkl
+model/metrics.json
+model/model_metadata.json
