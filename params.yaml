@@ -1,6 +1,6 @@
 model:
   # change this from 4 to 6 and compare the MLflow runs.
-  n_neighbors: 4
+  n_neighbors: 6
   metric: cosine
   top_k: 3
   experiment_name: ecommerce-recommendation-workshop
